@@ -4,19 +4,6 @@ library(dplyr)
 library(nse2r)
 
 
-nse_index_list()
-
-nse_index_quote()
-
-nse_index_quote(clean_names = FALSE)
-
-x <- nse_stock_top_gainers()
-x[5,3]
-
-write.csv(x[5,], "A19BDS0022.csv")
-nse_fo_top_gainers()
-nse_infy()
-
 
 Stock <- read_html("https://finance.yahoo.com/quote/MRF.NS?p=MRF.NS&.tsrc-fin-srch") 
 htmlText <- Stock %>%html_nodes ("span") %>%html_text()
